@@ -15,16 +15,16 @@ var pos = 0,
 
 function nextSlide(){
     stopCurrentVideo();
-    slides.eq(pos).animate({left:'-100%'},500);
+    slides.eq(pos).animate({left:'-100%'},1000);
     pos = pos >= numOfSlides-1 ? 0 : ++pos;
-    slides.eq(pos).css({left:'100%'}).animate({left:0},500);
+    slides.eq(pos).css({left:'100%'}).animate({left:0},1000);
 }
 
 function previousSlide(){
     stopCurrentVideo();
-    slides.eq(pos).animate({left:'100%'},500);
+    slides.eq(pos).animate({left:'100%'},1000);
     pos = pos == 0 ? numOfSlides-1 : --pos;
-    slides.eq(pos).css({left:'-100%'}).animate({left:0},500);
+    slides.eq(pos).css({left:'-100%'}).animate({left:0},1000);
 }
 
 function stopCurrentVideo(){
