@@ -1,0 +1,92 @@
+/* APP */
+#app {
+  text-align: center;
+  align-items: center;
+}
+
+/* Sections */
+
+.home-section {
+  width: 100%;
+  padding: 150px 0px 150px 0px;
+}
+.intro-section {
+  width: 100%;
+}
+#intro-img {
+  background-size: cover;
+  max-height: 1080px;
+  max-width: 1920px;
+}
+#intro p {
+  font-size: 30px;
+  color: rgb(255, 250, 250);
+}
+
+/* --- heading --- */
+.section-heading {
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+.section-heading .heading-line {
+  margin: 0 auto;
+  display: block;
+  height: 1px;
+  width: 80px;
+  background: #333;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* --- section bg var --- */
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-gray {
+  background: #f8f8f8;
+}
+
+.bg-dark {
+  background: #575757;
+}
+
+/* ================================
+About
+================================= */
+
+#textabout h2 {
+  font-weight: 300;
+  font-size: 24px;
+  text-align: left;
+}
+
+#textabout h3 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  font-style: italic;
+  text-align: left;
+}
+
+#textabout p {
+  line-height: 50px;
+  text-align: left;
+}
+
+#textabout {
+  align-content: center;
+  display: grid;
+}
+
+
+
+#spideContainer{
+  max-height: 1000px;
+}
