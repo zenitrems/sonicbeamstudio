@@ -3,38 +3,38 @@
     <v-main>
       <!--  intro area  -->
       <section id="intro" class="intro-section">
-        <v-container grid-list-xs>
-          <v-img id="intro-img" src="../assets/sonic_studio.jpg">
-            <v-container>
-              <v-row justify="center">
-                <v-col md="auto">
-                  <v-img
-                    class="animate__animated animate__bounce"
-                    max-height="400"
-                    max-width="400"
-                    src="../assets/sonic_logo.png"
-                    alt="Sonic Beam"
-                  >
-                  </v-img>
-                </v-col>
-              </v-row>
-              <v-row justify="center">
-                <v-col md="8">
-                  <p>
-                    ¡Bienvenido a Sonic Beam! En esta página podrás encontrar,
-                    el portafolio de alguno de los proyectos realizados en las
-                    áreas como de Diseño de sonido, captura de sonido directo,
-                    Mezcla o mastering, Voz n off o ya sea musicalización para
-                    proyectos audio visuales.
-                  </p>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col>
-                  <v-btn href="#about">Descubre mas</v-btn>
-                </v-col>
-              </v-row>
-            </v-container>
+        <v-container id="introContainer" class="animate_animated animate__fadeIn">
+          <v-img id="intro-img" src="../assets/sonic_studio.jpg" >
+          <v-container id="introCenterContainer">       
+            <v-row justify="center">
+              <v-col md="auto">
+                <v-img                  
+                  class="animate__animated animate__headShake"
+                  max-height="500"
+                  max-width="500"
+                  src="../assets/sonic_logo.png"
+                  alt="Sonic Beam"
+                >
+                </v-img>
+              </v-col>
+            </v-row>
+            <v-row justify="center">
+              <v-col md="8">
+                <p>
+                  ¡Bienvenido a Sonic Beam! En esta página podrás encontrar, el
+                  portafolio de algunos de los proyectos realizados en las áreas
+                  de captura de sonido directo, Diseño de sonido, Mezcla o
+                  mastering, Voz n off o ya sea musicalización para proyectos
+                  audio visuales.
+                </p>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-btn href="#about">Descubre mas</v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
           </v-img>
         </v-container>
       </section>
@@ -93,12 +93,11 @@
             </v-col>
           </v-row>
         </v-container>
-
-        <!-- Splide slide -->
-        <splide>
-          <!-- slides -->
-          <splide-slide>
-            <v-container id="splideContainer">
+        <v-container id="splideContainer">
+          <!-- Splide slide -->
+          <splide>
+            <!-- slides -->
+            <splide-slide>
               <v-row>
                 <v-col>
                   <h4>Sonido directo</h4>
@@ -120,11 +119,9 @@
                   ></v-img>
                 </v-col>
               </v-row>
-            </v-container>
-          </splide-slide>
-          <!--  -->
-          <splide-slide>
-            <v-container>
+            </splide-slide>
+            <!--  -->
+            <splide-slide>
               <v-row>
                 <v-col>
                   <h4>Diseño de Sonido</h4>
@@ -146,11 +143,9 @@
                   ></v-img>
                 </v-col>
               </v-row>
-            </v-container>
-          </splide-slide>
-          <!--  -->
-          <splide-slide>
-            <v-container>
+            </splide-slide>
+            <!--  -->
+            <splide-slide>
               <v-row>
                 <v-col>
                   <h4>Mezcla y Master</h4>
@@ -169,33 +164,30 @@
                   ></v-img>
                 </v-col>
               </v-row>
-            </v-container>
-          </splide-slide>
-        </splide>
+            </splide-slide>
+          </splide>
+        </v-container>
       </section>
 
       <!--  --------------------------------------------------------------------------------------- -->
       <!-- ----------------------------------------------------------------------------------------------- -->
 
       <!-- VIDEO PLAYER -->
-      <section id="videoPlayer" class="home-section bg-white">
-        <v-container grid-list-md>
-          <div class="item">
-            <div class="player">
-              <video-player
-                ref="videoPlayer"
-                class="vjs-custom-skin"
-                :options="playerOptions"
-              >
-              </video-player>
-            </div>
-          </div>
+      <section id="" class="home-section bg-white">
+        <v-container fluid>
+          <video-player
+            class="video-player-box"
+            ref="videoPlayer"
+            :options="playerOptions"
+            :playsinline="false"
+          >
+          </video-player>
         </v-container>
       </section>
 
       <!-- Contact -->
 
-      <section id="contact" class="home-section">
+      <section id="contacto" class="home-section">
         <v-container>
           <v-row>
             <v-col>
@@ -243,32 +235,60 @@
   </v-app>
 </template>
 <script>
-// Similarly, you can also introduce the plugin resource pack you want to use within the component
-// import 'some-videojs-plugin'
+// require styles
+import "video.js/dist/video-js.css";
+
+import { videoPlayer } from "vue-video-player";
+
 export default {
+  components: {
+    videoPlayer,
+  },
   data() {
     return {
       playerOptions: {
         // videojs options
-        muted: true,
-        language: "en",
-        fluid: "true",
         sources: [
           {
-            type: "video/webm",
-            src: "./assets/video/mujeres.webm",
+            type: "video/mp4",
+            src:
+              "../assets/video/Las mujeres más talentosas de México te revelan las tendencias de primavera_1080p.mp4",
           },
         ],
+        poster: "",
       },
     };
   },
-  computed: {
+
+  mounted() {
+    console.log("this is current player instance object", this.player);
+  },
+  /* computed: {
     player() {
       return this.$refs.videoPlayer.player;
     },
   },
-  mounted() {
-    console.log("this is current player instance object", this.player);
-  },
+  methods: {
+    // listen event
+    onPlayerPlay(player) {
+      // console.log('player play!', player)
+    },
+    onPlayerPause(player) {
+      // console.log('player pause!', player)
+    },
+    // ...player event
+
+    // or listen state event
+    playerStateChanged(playerCurrentState) {
+      // console.log('player current update state', playerCurrentState)
+    },
+
+    // player is ready
+    playerReadied(player) {
+      console.log("the player is readied", player);
+      // you can use it to do something...
+      // player.[methods]
+    },
+  }, */
 };
 </script>

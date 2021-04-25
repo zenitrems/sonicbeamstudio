@@ -13,10 +13,20 @@
 .intro-section {
   width: 100%;
 }
+
+
+#introContainer{
+  padding: 0%;
+}
 #intro-img {
   background-size: cover;
   max-height: 1080px;
   max-width: 1920px;
+}
+
+#introCenterContainer{
+  margin-top: 150px;
+  padding: 10px;
 }
 #intro p {
   font-size: 30px;
