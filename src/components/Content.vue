@@ -1,46 +1,16 @@
 <template>
   <v-app>
     <v-main>
-      <!--  intro area  -->
-      <section id="intro" class="intro-section">
-        <v-container id="introContainer" class="animate_animated animate__fadeIn">
-          <v-img id="intro-img" src="../assets/sonic_studio.jpg" >
-          <v-container id="introCenterContainer">       
-            <v-row justify="center">
-              <v-col md="auto">
-                <v-img                  
-                  class="animate__animated animate__headShake"
-                  max-height="500"
-                  max-width="500"
-                  src="../assets/sonic_logo.png"
-                  alt="Sonic Beam"
-                >
-                </v-img>
-              </v-col>
-            </v-row>
-            <v-row justify="center">
-              <v-col md="8">
-                <p>
-                  ¡Bienvenido a Sonic Beam! En esta página podrás encontrar, el
-                  portafolio de algunos de los proyectos realizados en las áreas
-                  de captura de sonido directo, Diseño de sonido, Mezcla o
-                  mastering, Voz n off o ya sea musicalización para proyectos
-                  audio visuales.
-                </p>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col>
-                <v-btn href="#about">Descubre mas</v-btn>
-              </v-col>
-            </v-row>
-          </v-container>
-          </v-img>
-        </v-container>
-      </section>
-      <!-- #intro -->
 
-      <!-- About -->
+      <v-parallax dark height="1000" src="../assets/sonic_studio.webp">
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <img class="animate__animated animate__headShake" id="soniclogo" src="../assets/sonic_logo.png" />
+            
+          </v-col>
+        </v-row>
+      </v-parallax>
+
       <section id="about" class="home-section">
         <v-container>
           <v-row>
@@ -53,11 +23,7 @@
           </v-row>
           <v-row>
             <v-col>
-              <v-img
-                max-width="800"
-                max-height="800"
-                src="../assets/about2.png"
-              ></v-img>
+              <v-img src=../assets/about.png max-width="868px"></v-img>
             </v-col>
             <v-col id="textabout">
               <h2>
@@ -93,37 +59,38 @@
             </v-col>
           </v-row>
         </v-container>
-        <v-container id="splideContainer">
-          <!-- Splide slide -->
-          <splide>
-            <!-- slides -->
-            <splide-slide>
-              <v-row>
-                <v-col>
+
+
+        <!-- Splide slide -->
+        <splide id="slide">
+          <!-- slides -->
+          <splide-slide>
+            <v-row align="center" justify="center" >
+              <v-col class="text-center">
+                <v-container>
                   <h4>Sonido directo</h4>
                   <p>
                     Contamos con una amplia experiencia en colaboración de
-                    varios proyectos Películas como chivas la película, Poderoso
-                    victoria, volverá el polvo a la tierra. Documentales
-                    musicales como Music hunters, Telefunka, Followings
-                    políticos y deportivos y registro de eventos como El FICG,
-                    La FIL Guadalajara.
+                    varios proyectos Películas como chivas la película,
+                    Poderoso victoria, volverá el polvo a la tierra.
+                    Documentales musicales como Music hunters, Telefunka,
+                    Followings políticos y deportivos y registro de eventos
+                    como El FICG, La FIL Guadalajara.
                   </p>
-                </v-col>
-                <v-col>
-                  <v-img
-                    src="../assets/servicios/sonidodirecto.png"
-                    alt=""
-                    max-width="800"
-                    max-height="800"
-                  ></v-img>
-                </v-col>
-              </v-row>
-            </splide-slide>
-            <!--  -->
-            <splide-slide>
-              <v-row>
-                <v-col>
+                </v-container>
+              </v-col>
+              <v-col >
+                <v-container>
+                  <v-img max-width="700" src="../assets/servicios/sonidodirecto.png" alt=""></v-img>
+                </v-container>
+              </v-col>
+            </v-row>
+          </splide-slide>
+          <!--  -->
+          <splide-slide>
+            <v-row align="center" justify="center">
+              <v-col class="text-center" >
+                <v-container>
                   <h4>Diseño de Sonido</h4>
                   <p>
                     Nuestro lema es innovar y experimentar. Generando así
@@ -133,60 +100,47 @@
                     como Volverá el polvo a la tierra, meatus, videojuegos,
                     spots publicitarios entre otros.
                   </p>
-                </v-col>
-                <v-col>
-                  <v-img
-                    src="../assets/servicios/disenosonoro.png"
-                    alt=""
-                    max-width="800"
-                    max-height="800"
-                  ></v-img>
-                </v-col>
-              </v-row>
-            </splide-slide>
-            <!--  -->
-            <splide-slide>
-              <v-row>
-                <v-col>
+                </v-container>
+              </v-col>
+              <v-col>
+                <v-container>
+                  <v-img max-width="700" src="../assets/servicios/disenosonoro.png" alt=""></v-img>
+                </v-container>
+              </v-col>
+            </v-row>
+          </splide-slide>
+          <!--  -->
+          <splide-slide>
+            <v-row lign="center" justify="center">
+              <v-col class="text-center">
+                <v-container>
                   <h4>Mezcla y Master</h4>
                   <p>
                     Realizamos diversas mezclas mastering, tanto como para
                     proyectos musicales como audiovisuales. Contando con un
                     equipo de estudio con la mas alta fidelidad
                   </p>
-                </v-col>
-                <v-col>
-                  <v-img
-                    src="../assets/servicios/sonidodirecto.png"
-                    alt=""
-                    max-width="800"
-                    max-height="800"
-                  ></v-img>
-                </v-col>
-              </v-row>
-            </splide-slide>
-          </splide>
-        </v-container>
+                </v-container>
+              </v-col>
+              <v-col>
+                <v-container>
+                  <v-img max-width="700" src="../assets/servicios/mezclaymaster.webp" alt=""></v-img>
+                </v-container>
+              </v-col>
+            </v-row>
+          </splide-slide>
+        </splide>
+
       </section>
 
-      <!--  --------------------------------------------------------------------------------------- -->
-      <!-- ----------------------------------------------------------------------------------------------- -->
-
-      <!-- VIDEO PLAYER -->
-      <section id="" class="home-section bg-white">
-        <v-container fluid>
-          <video-player
-            class="video-player-box"
-            ref="videoPlayer"
-            :options="playerOptions"
-            :playsinline="false"
-          >
-          </video-player>
-        </v-container>
-      </section>
+      <!-- Video -->
+      <v-container>
+        <div class="player-container">
+          <vue-core-video-player src="../assets/videos/mujeres_talentosas.webm"></vue-core-video-player>
+        </div>
+      </v-container>
 
       <!-- Contact -->
-
       <section id="contacto" class="home-section">
         <v-container>
           <v-row>
@@ -209,23 +163,19 @@
           <v-row>
             <v-col>
               <h5>Redes sociales</h5>
-              <v-btn
-                icon
+              <v-btn icon
                 href="https://www.facebook.com/Sonic-Beam-1172548622817110/?eid=ARD_PeqrZivYhPYB3Kzpt2CQb3JXBtTfsUBGARocnmbetElW2fDsLJ5Ffd8d8bt5zMwqeFnDitQ98c5J&fref=tag"
-              >
-                <v-icon>mdi-Facebook</v-icon>
+                target="blank">
+                <v-icon>mdi-facebook</v-icon>
               </v-btn>
-              <v-btn
-                icon
-                href="https://www.instagram.com/splushions_in_da_sky/"
-              >
-                <v-icon>mdi-Instagram</v-icon>
+              <v-btn icon href="https://www.instagram.com/sonic_beam_studio/" target="blank">
+                <v-icon>mdi-instagram</v-icon>
               </v-btn>
-              <v-btn icon href="https://vimeo.com/user47738037">
-                <v-icon>mdi-Vimeo</v-icon>
+              <v-btn icon href="https://vimeo.com/user47738037" target="blank">
+                <v-icon>mdi-vimeo</v-icon>
               </v-btn>
-              <v-btn icon href="https://soundcloud.com/user-750602236">
-                <v-icon>mdi-Soundcloud</v-icon>
+              <v-btn icon href="https://soundcloud.com/user-750602236" target="blank">
+                <v-icon>mdi-soundcloud</v-icon>
               </v-btn>
             </v-col>
           </v-row>
@@ -234,61 +184,22 @@
     </v-main>
   </v-app>
 </template>
+
 <script>
-// require styles
-import "video.js/dist/video-js.css";
+  import "../styles/content.scss";
+  import "animate.css";
+  import {
+    Splide,
+    SplideSlide
+  } from "@splidejs/vue-splide";
+  import "@splidejs/splide/dist/css/themes/splide-sea-green.min.css";
 
-import { videoPlayer } from "vue-video-player";
+  export default {
+    name: "app",
+    components: {
+      Splide,
+      SplideSlide,
+    },
+  };
 
-export default {
-  components: {
-    videoPlayer,
-  },
-  data() {
-    return {
-      playerOptions: {
-        // videojs options
-        sources: [
-          {
-            type: "video/mp4",
-            src:
-              "../assets/video/Las mujeres más talentosas de México te revelan las tendencias de primavera_1080p.mp4",
-          },
-        ],
-        poster: "",
-      },
-    };
-  },
-
-  mounted() {
-    console.log("this is current player instance object", this.player);
-  },
-  /* computed: {
-    player() {
-      return this.$refs.videoPlayer.player;
-    },
-  },
-  methods: {
-    // listen event
-    onPlayerPlay(player) {
-      // console.log('player play!', player)
-    },
-    onPlayerPause(player) {
-      // console.log('player pause!', player)
-    },
-    // ...player event
-
-    // or listen state event
-    playerStateChanged(playerCurrentState) {
-      // console.log('player current update state', playerCurrentState)
-    },
-
-    // player is ready
-    playerReadied(player) {
-      console.log("the player is readied", player);
-      // you can use it to do something...
-      // player.[methods]
-    },
-  }, */
-};
 </script>

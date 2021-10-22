@@ -1,4 +1,4 @@
-# sonicbeamstudio
+# sonic.vue
 
 ## Project setup
 ```
