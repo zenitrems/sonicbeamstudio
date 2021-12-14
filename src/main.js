@@ -1,9 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
-import VueCoreVideoPlayer from 'vue-core-video-player';
+import "animate.css";
 
-Vue.use(VueCoreVideoPlayer)
 
 Vue.config.productionTip = false;
 
