@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-
+      
       <v-parallax height="1000" src=@/assets/sonic_studio.webp> <v-row align="center" justify="center">
         <v-col>
           <v-container grid-list-xl fluid>
@@ -12,7 +12,8 @@
         </v-col>
         </v-row>
       </v-parallax>
-      <!-- about -->
+      
+      <!-- about ##################################################-->
       <section id="about" class="home-section">
         <v-row>
           <v-col>
@@ -24,7 +25,6 @@
             </v-container>
           </v-col>
         </v-row>
-
         <v-row justify="center">
           <v-col md="4">
             <v-container grid-list-md fluid>
@@ -48,11 +48,11 @@
           </v-col>
         </v-row>
       </section>
-      <!-- Servicios -->
+      <!-- Servicios###################################### -->
       <section id="servicios" class="home-section">
         <v-row>
           <v-col>
-            <v-container grid-list-md fluid>
+            <v-container fluid>
               <div data-aos="fade-up" class="section-heading">
                 <h2>Servicios</h2>
                 <div class="heading-line"></div>
@@ -63,77 +63,85 @@
         </v-row>
         <!-- carrousel -->
         <div data-aos="fade-in">
+          <v-container>          
           <v-carousel hide-delimiters cycle interval="5500" :show-arrows="false">
             <!-- ############## -->
             <v-carousel-item reverse-transition="fade-transition" transition="fade-transition">
-              <v-row align="center" justify="center">
-                <v-col md="4">
-                  <v-container grid-list-md fluid>
-                    <div class="servicioImg">
-                      <v-img src=@/assets/servicios/mezclaymaster.webp> </v-img> </div> </v-container> </v-col> <v-col
-                        md="4">
-                        <v-container grid-list-md fluid>
-                          <div>
-                            <h4>Mezcla y Master</h4>
-                            <p>
-                              Realizamos diversas mezclas mastering, tanto como para
-                              proyectos musicales como audiovisuales. Contando con un
-                              equipo de estudio con la mas alta fidelidad.
-                            </p>
-                          </div>
-                        </v-container>
-                </v-col>
-              </v-row>
+              <v-card>
+                <v-row align="center" justify="center">
+                  <v-col md="4">
+                    <v-container grid-list-md fluid>
+                      <div class="servicioImg">
+                        <v-img src=@/assets/servicios/mezclaymaster.webp> </v-img> </div> </v-container> </v-col> <v-col
+                          md="4">
+                          <v-container grid-list-md fluid>
+                            <div>
+                              <h4>Mezcla y Master</h4>
+                              <p>
+                                Realizamos diversas mezclas mastering, tanto como para
+                                proyectos musicales como audiovisuales. Contando con un
+                                equipo de estudio con la mas alta fidelidad.
+                              </p>
+                            </div>
+                          </v-container>
+                  </v-col>
+                </v-row>
+              </v-card>
             </v-carousel-item>
             <!-- ############ -->
             <v-carousel-item reverse-transition="fade-transition" transition="fade-transition">
-              <v-row align="center" justify="center">
-                <v-col md="4">
-                  <v-container grid-list-md fluid>
-                    <div class="servicioImg">
-                      <v-img src=@/assets/servicios/disenosonoro.png> </v-img> </div> </v-container> </v-col> <v-col
-                        md="4">
-                        <v-container grid-list-md fluid>
-                          <h4>Diseño de Sonido</h4>
-                          <p>
-                            Nuestro lema es innovar y experimentar. Generando así
-                            diseños de sonido en busca de el alma de un proyecto, a
-                            veces alejándonos de los clichés para encontrar un sello
-                            único de la voz creativa que queremos encontrar. Proyectos
-                            como Volverá el polvo a la tierra, meatus, videojuegos,
-                            spots publicitarios entre otros.
-                          </p>
-                        </v-container>
-                </v-col>
-              </v-row>
+              <v-card>
+                <v-row align="center" justify="center">
+                  <v-col md="4">
+                    <v-container grid-list-md fluid>
+                      <div class="servicioImg">
+                        <v-img src=@/assets/servicios/disenosonoro.png> </v-img> </div> </v-container> </v-col> <v-col
+                          md="4">
+                          <v-container grid-list-md fluid>
+                            <h4>Diseño de Sonido</h4>
+                            <p>
+                              Nuestro lema es innovar y experimentar. Generando así
+                              diseños de sonido en busca de el alma de un proyecto, a
+                              veces alejándonos de los clichés para encontrar un sello
+                              único de la voz creativa que queremos encontrar. Proyectos
+                              como Volverá el polvo a la tierra, meatus, videojuegos,
+                              spots publicitarios entre otros.
+                            </p>
+                    </v-container>
+                  </v-col>
+                </v-row>
+              </v-card>
             </v-carousel-item>
             <!-- ######### -->
             <v-carousel-item reverse-transition="fade-transition" transition="fade-transition">
-              <v-row align="center" justify="center">
-                <v-col md="4">
-                  <v-container grid-list-md fluid>
-                    <div class="servicioImg">
-                      <v-img src=@/assets/servicios/sonidodirecto.png> </v-img> </div> </v-container> </v-col> <v-col
-                        md="4">
-                        <v-container grid-list-md fluid>
-                          <h4>Sonido directo</h4>
-                          <p>
-                            Contamos con una amplia experiencia en colaboración de
-                            varios proyectos Películas como chivas la película,
-                            Poderoso victoria, volverá el polvo a la tierra.
-                            Documentales musicales como Music hunters, Telefunka,
-                            Followings políticos y deportivos y registro de eventos
-                            como El FICG, La FIL Guadalajara.
-                          </p>
-                        </v-container>
-                </v-col>
-              </v-row>
+              <v-card>
+                <v-row align="center" justify="center">
+                  <v-col md="4">
+                    <v-container grid-list-md fluid>
+                      <div class="servicioImg">
+                        <v-img src=@/assets/servicios/sonidodirecto.png> </v-img> </div> </v-container> </v-col> <v-col
+                          md="4">
+                          <v-container grid-list-md fluid>
+                            <h4>Sonido directo</h4>
+                            <p>
+                              Contamos con una amplia experiencia en colaboración de
+                              varios proyectos Películas como chivas la película,
+                              Poderoso victoria, volverá el polvo a la tierra.
+                              Documentales musicales como Music hunters, Telefunka,
+                              Followings políticos y deportivos y registro de eventos
+                              como El FICG, La FIL Guadalajara.
+                            </p>
+                          </v-container>
+                  </v-col>
+                </v-row>
+              </v-card>
             </v-carousel-item>
             <!-- ################# -->
           </v-carousel>
+          </v-container>
         </div>
       </section>
-      <!-- PORTAFOLIO -->
+      <!-- PORTAFOLIO ####################-->
       <section id="portafolio" class="home-section">
         <v-container grid-list-md fluid>
           <v-row>
@@ -148,40 +156,38 @@
         </v-container>
         <!-- VIDEOCARD!!!!!!!!!! -->
         <!-- ############################## -->
-        <v-carousel :show-arrows="false">
+        <v-carousel :show-arrows="false" hide-delimiters>
           <!-- ############ -->
           <v-carousel-item>
-            <v-card>
-              <v-row align="center" justify="center">
-                <v-col md="4">
-                  <v-container grid-list-md fluid>
-                    <div data-aos="fade-in">
-                      <h3 class="headline mb-0">Mujeres Talentosas</h3>
-                      <v-spacer></v-spacer>
-                      <v-btn insetcolor="secondary">anterior</v-btn>
-                      <v-btn color="primary">siguiente</v-btn>
-                    </div>
-                  </v-container>
-                </v-col>
-                <v-col md="4">
-                  <v-container grid-list-md fluid>
-                    <div id="cardVideo">
-                      <video class="video" ref="video" controls="true" preload="none"
-                        poster="@/assets/videos/MujeresTalentosas.png">
-                        <source src=@/assets/videos/MujeresTalentosas.webm type="video/webm">
-                      </video>
-                    </div>
-                  </v-container>
-                </v-col>
-              </v-row>
-            </v-card>
+            <v-row align="center" justify="center">
+              <v-col md="4">
+                <v-container grid-list-md fluid>
+                  <div data-aos="fade-in">
+                    <h3 class="headline mb-0">Mujeres Talentosas</h3>
+                    <v-spacer></v-spacer>
+                    <v-btn insetcolor="secondary">anterior</v-btn>
+                    <v-btn color="primary">siguiente</v-btn>
+                  </div>
+                </v-container>
+              </v-col>
+              <v-col md="4">
+                <v-container grid-list-md fluid>
+                  <div id="cardVideo">
+                    <video class="video" ref="video" controls="true" preload="none"
+                      poster="@/assets/videos/MujeresTalentosas.png">
+                      <source src=@/assets/videos/MujeresTalentosas.webm type="video/webm">
+                    </video>
+                  </div>
+                </v-container>
+              </v-col>
+            </v-row>
+
           </v-carousel-item>
           <!-- ########## -->
         </v-carousel>
         <!-- ############################## -->
       </section>
-
-      <!-- <section id="renta" class="home-section">
+      <section id="renta" class="home-section">
           <v-row>
             <v-col>
               <div data-aos="fade-in" class="section-heading">
@@ -190,17 +196,14 @@
               </div>
             </v-col>
           </v-row>
-
           <v-row>
             <v-col>
               <v-card>
                 <v-card-title primary-title>
                   Grabadoras
                 </v-card-title>
-
                 <v-row>
                   <v-col>
-
                     <v-hover v-slot="{ hover }">
                       <v-card class="mx-auto" color="grey lighten-4" max-width="250">
                         <v-img :aspect-ratio="16/9" src=@/assets/equipo/zoomf8n.jpg>
@@ -214,10 +217,8 @@
                         </v-img>
                       </v-card>
                     </v-hover>
-
                   </v-col>
                   <v-col>
-
                     <v-hover v-slot="{ hover }">
                       <v-card class="mx-auto" color="grey lighten-4" max-width="250">
                         <v-img :aspect-ratio="16/9" src=@/assets/equipo/zoomh6.jpg>
@@ -231,12 +232,10 @@
                         </v-img>
                       </v-card>
                     </v-hover>
-
                   </v-col>
                 </v-row>
                 <v-row>
                   <v-col>
-
                     <v-hover v-slot="{ hover }">
                       <v-card class="mx-auto" color="grey lighten-4" max-width="250">
                         <v-img :aspect-ratio="16/9" src=@/assets/equipo/zoomh1.jpg>
@@ -250,14 +249,11 @@
                         </v-img>
                       </v-card>
                     </v-hover>
-
                   </v-col>
-
                 </v-row>
               </v-card>
             </v-col>
             <v-col>
-
               <v-card>
                 <v-card-title primary-title>
                   Microfonía
@@ -286,11 +282,9 @@
                             <div v-if="hover"
                               class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal text-h2 white--text"
                               style="height: 100%;">
-
                             </div>
                           </v-expand-transition>
                         </v-img>
-
                       </v-card>
                     </v-hover>
                   </v-col>
@@ -337,10 +331,10 @@
               </v-card>
             </v-col>
           </v-row>
-        </section> -->
-
+        </section> 
+        
       <!-- contacto -->
-      <section id="contacto" class="home-section">
+      <section id="contacto" class="bottom-section">
         <div data-aos="fade-up">
           <v-row align="center" justify="center">
             <v-col md="4">
@@ -362,7 +356,6 @@
               <p>sonicbeamstudio@gmail.com<br /></p>
             </v-col>
           </v-row>
-
           <v-row align="center" justify="center">
             <v-col md="4">
               <v-btn icon
@@ -381,26 +374,23 @@
               </v-btn>
             </v-col>
           </v-row>
-
         </div>
       </section>
-
     </v-main>
   </v-app>
 </template>
 <script>
-  import AOS from 'aos';
-  import 'aos/dist/aos.css';
-  AOS.init();
-  export default {
-    data: () => ({
-      isActive: false,
-    }),
-    computed: {
-      videoElement() {
-        return this.$refs.video;
-      },
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+export default {
+  data: () => ({
+    isActive: false,
+  }),
+  computed: {
+    videoElement() {
+      return this.$refs.video;
     },
-  };
-
+  },
+};
 </script>

@@ -2,20 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 @media screen and (min-width: 799px) {
-  .appMargin {
+  /* .appMargin {
     margin: 0 100px 0 100px;
-  }
-}
-
+  } */
+} 
 #app {
   text-align: center;
   align-content: center;
   font-family: $roboto;
 }
-
 #studioimg {
   width: 100%;
-  max-width: 1350px;
+  
   /* real image width */
   position: relative;
   top: 0;
@@ -24,7 +22,6 @@
   bottom: 0;
   margin: auto;
 }
-
 #soniclogo img {
   width: 100%;
   position: absolute;
@@ -35,22 +32,23 @@
   bottom: 0;
   margin: auto;
 }
+.bottom-section{
+  width: 100%;
+  padding: 100px 0 100px 0;
+}
 
 .home-section {
   width: 100%;
   padding: 150px 0px 150px 0px;
 }
-
 .section-heading {
   font-family: $ubuntu;
   margin-bottom: 50px;
 }
-
 .section-heading h2 {
   font-size: 38px;
   text-transform: uppercase;
 }
-
 .section-heading .heading-line {
   margin: 0 auto;
   display: block;
@@ -60,9 +58,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-
-
 /* About */
 #aboutimg img {
   width: 100%;
